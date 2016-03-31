@@ -4,16 +4,16 @@
 <head>
 <title>Enigma Spa Salon</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<script src="js/jquery.js"></script>
-<script src="js/jquery-migrate-1.1.1.js"></script>
-<script src="js/bgstretcher.js"></script>
+<link rel="stylesheet" href="resources/css/style.css">
+<link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+<script src="resources/js/jquery.js"></script>
+<script src="resources/js/jquery-migrate-1.1.1.js"></script>
+<script src="resources/js/bgstretcher.js"></script>
 <script>
 $(document).ready(function () {
     $('body').bgStretcher({
-        images: ['images/slide-1.jpg', 'images/slide-2.jpg', 'images/slide-3.jpg'],
+        images: ['resources/images/slide-1.jpg', 'resources/images/slide-2.jpg', 'resources/images/slide-3.jpg'],
         imageWidth: 1600,
         imageHeight: 964,
         resizeProportionally: true,
@@ -39,15 +39,15 @@ $(document).ready(function () {
   <div class="row-top">
     <div class="main">
       <ul class="list-soc">
-        <li><a href="#"><img alt="" src="images/soc-icon1.png"></a></li>
-        <li><a href="#"><img alt="" src="images/soc-icon2.png"></a></li>
+        <li><a href="#"><img alt="" src="resources/images/soc-icon1.png"></a></li>
+        <li><a href="#"><img alt="" src="resources/images/soc-icon2.png"></a></li>
       </ul>
     </div>
   </div>
   <header>
     <div class="row-nav">
       <div class="main">
-        <h1 class="logo"><a href="index.html"><img alt="" src="images/logo.png"></a></h1>
+        <h1 class="logo"><a href="index.html"><img alt="" src="resources/images/logo.png"></a></h1>
         <nav>
           <ul class="menu">
             <li class="current"><a href="index.html">Home</a></li>
@@ -70,17 +70,17 @@ $(document).ready(function () {
     <div class="container_12">
       <div class="wrapper">
         <article class="grid_4">
-          <figure class="box-1"><img src="images/page1-img1.jpg" alt="">
+          <figure class="box-1"><img src="resources/images/page1-img1.jpg" alt="">
             <figcaption>Face Care <a href="more.html"></a></figcaption>
           </figure>
         </article>
         <article class="grid_4">
-          <figure class="box-1"><img src="images/page1-img2.jpg" alt="">
+          <figure class="box-1"><img src="resources/images/page1-img2.jpg" alt="">
             <figcaption>Hand Care <a href="more.html"></a></figcaption>
           </figure>
         </article>
         <article class="grid_4">
-          <figure class="box-1"><img src="images/page1-img3.jpg" alt="">
+          <figure class="box-1"><img src="resources/images/page1-img3.jpg" alt="">
             <figcaption>Foot Care <a href="more.html"></a></figcaption>
           </figure>
         </article>
