@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 <title>Enigma Spa Salon</title>
@@ -10,10 +11,21 @@
 <script src="resources/js/jquery.js"></script>
 <script src="resources/js/jquery-migrate-1.1.1.js"></script>
 <script src="resources/js/bgstretcher.js"></script>
+
+
 <script>
 $(document).ready(function () {
+
+	// arrays to be sent to servlet
+	var readings = new Array();
+	var i=0
+	<c:forEach var ="imgpath" items="${imagenes.imagePath}" >
+		readings[i] = '${imgpath}';
+		i++;
+	</c:forEach>
+		
     $('body').bgStretcher({
-        images: ['resources/images/slide-1.jpg', 'resources/images/slide-2.jpg', 'resources/images/slide-3.jpg'],
+        images: readings,
         imageWidth: 1600,
         imageHeight: 964,
         resizeProportionally: true,
@@ -69,21 +81,13 @@ $(document).ready(function () {
   <div class="row-1">
     <div class="container_12">
       <div class="wrapper">
-        <article class="grid_4">
-          <figure class="box-1"><img src="resources/images/page1-img1.jpg" alt="">
-            <figcaption>Face Care <a href="more.html"></a></figcaption>
-          </figure>
-        </article>
-        <article class="grid_4">
-          <figure class="box-1"><img src="resources/images/page1-img2.jpg" alt="">
-            <figcaption>Hand Care <a href="more.html"></a></figcaption>
-          </figure>
-        </article>
-        <article class="grid_4">
-          <figure class="box-1"><img src="resources/images/page1-img3.jpg" alt="">
-            <figcaption>Foot Care <a href="more.html"></a></figcaption>
-          </figure>
-        </article>
+      	<c:forEach var ="session" items="${imagenes.sessionFirstPageDTOList}" >
+	        <article class="grid_4">
+	          <figure class="box-1"><img src=<c:out value="${session.imagePath}"/> alt="">
+	            <figcaption><c:out value="${session.tittle}"/><a href="more.html"></a></figcaption>
+	          </figure>
+	        </article>
+        </c:forEach>
       </div>
     </div>
   </div>
