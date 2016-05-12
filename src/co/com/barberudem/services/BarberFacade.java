@@ -5,6 +5,27 @@ import co.com.barberudem.model.FirstPageDTO;
 import co.com.barberudem.model.LugarDTO;
 
 public class BarberFacade {
+  
+  /** Instancia de si mismo. */
+  private static BarberFacade barberFacade;
+  
+  /**
+   * Constructor privado
+   */
+  private BarberFacade() {
+    super();
+  }
+  
+  /**
+   * Obtiene una instancia de la facade
+   * @return
+   */
+  public static BarberFacade getInstance() {
+    if (barberFacade == null) {
+      barberFacade = new BarberFacade();
+    } 
+    return barberFacade;
+  }
 
 	public FirstPageDTO getFirstPageDTO() {
 		FirstPageServices firstPageServices = new FirstPageServicesImpl();

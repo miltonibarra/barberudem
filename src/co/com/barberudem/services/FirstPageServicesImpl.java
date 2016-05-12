@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import co.com.barberudem.model.FirstPageDTO;
 import co.com.barberudem.model.SessionFirstPageDTO;
 
+
 public class FirstPageServicesImpl implements FirstPageServices {
 
 	@Override

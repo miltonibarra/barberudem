@@ -10,4 +10,10 @@ public interface LugarServices {
    * @return LugarDTO {@link LugarDTO}
    */
   public LugarDTO findLugarByID(int lugarId);
+  
+  /**
+   * Obtiene todos los lugares
+   * @return
+   */
+  public LugarDTO findLugares();
 }
