@@ -74,14 +74,9 @@
 			<version>1.7.1</version>
 	   </dependency>
 	   <dependency>
-	    	<groupId>barberudem_jdbc</groupId>
-	    	<artifactId>barberudem_jdbc</artifactId>
+	    	<groupId>barberudem_ws</groupId>
+	    	<artifactId>barberudem_ws</artifactId>
 	    	<version>0.0.1-SNAPSHOT</version>
 	    </dependency>
-	   <dependency>
-	    	<groupId>barberudem_jpa</groupId>
-	    	<artifactId>barberudem_jpa</artifactId>
-	    	<version>0.0.1-SNAPSHOT</version>
-	    </dependency>	    
 	</dependencies>  
 </project>
