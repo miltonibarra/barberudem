@@ -7,21 +7,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import co.com.barberudem.model.FirstPageDTO;
-import co.com.barberudem.services.BarberFacade;
-
+import co.com.barberudem.services.BarberFacadeClient;
 
 @Controller
 public class startController {
 
   @RequestMapping(value = "/start", method = RequestMethod.GET)
   public ModelAndView start(@ModelAttribute("imagenes") FirstPageDTO firstPageDTO) {
-    BarberFacade barberFacade = BarberFacade.getInstance();
+    BarberFacadeClient barberFacade = new BarberFacadeClient();
     return new ModelAndView("index", "imagenes", barberFacade.getFirstPageDTO());
   }
 
   @RequestMapping(value = "/lugares", method = RequestMethod.GET)
   public ModelAndView places(@ModelAttribute("imagenes") FirstPageDTO firstPageDTO) {
-    BarberFacade barberFacade = BarberFacade.getInstance();
+    BarberFacadeClient barberFacade = new BarberFacadeClient();
     return new ModelAndView("places", "imagenes", barberFacade.getFirstPageDTO());
   }
 }
